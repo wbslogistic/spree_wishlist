@@ -6,6 +6,9 @@ class Spree::WishlistsController < Spree::StoreController
   respond_to :html
   respond_to :js, :only => [:update]
 
+      layout "no_catalog"
+
+
   def new
     @wishlist = Spree::Wishlist.new
 

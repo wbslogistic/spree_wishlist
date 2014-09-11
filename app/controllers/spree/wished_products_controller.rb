@@ -35,6 +35,14 @@ class Spree::WishedProductsController < Spree::StoreController
     end
   end
 
+  def destroy_all
+    @wished_products = Spree::WishedProduct.all
+    puts @wished_products
+    @wished_products.destroy_all
+
+    redirect_to default_wishlist_path
+  end
+
   private
 
   def wished_product_attributes
