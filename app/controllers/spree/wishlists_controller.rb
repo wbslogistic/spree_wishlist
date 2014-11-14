@@ -32,6 +32,7 @@ class Spree::WishlistsController < Spree::StoreController
   end
 
   def show
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
     respond_with(@wishlist)
   end
 

@@ -40,7 +40,7 @@ class Spree::WishedProductsController < Spree::StoreController
     puts @wished_products
     @wished_products.destroy_all
 
-    redirect_to default_wishlist_path
+    redirect_to :back
   end
 
   private
